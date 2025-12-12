@@ -50,6 +50,6 @@ def details(request,id):
 
 def title(request,id):
     url=reverse('post',args=[id])
-    return HttpResponseRedirect(f'/posts/{id}/')
+    return HttpResponseRedirect(url)
 
 
