@@ -1,0 +1,12 @@
+<a href="{% url 'detail' post.id %}">
+      <div class="card-sm border border-3 border-gray text-center rounded">
+      <img class="border border-dark rounded-circle"
+              src="{{post.imageurl}}"
+           alt="{{post.title}}"
+           width="25%"/>
+      <h3 class="text-decoration-none text-dark">{{post.title}}</h3>
+      <p class="text-decoration-none text-dark">{{post.discription}}</p>
+       <button class="btn btn- btn-dark"
+       >Read More ...</button>
+      </div>
+      </a>

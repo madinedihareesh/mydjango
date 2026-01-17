@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+{%block title%}Home Page{%endblock title%}
+{%block base%}
+<div class="container-fluid d-flex flex-row gap-2">
+    {%for post in posts%}
+      {% include 'posts/carddetail.html' %}
+
+    {% endfor %}
+    </div>
+{%endblock base%}
