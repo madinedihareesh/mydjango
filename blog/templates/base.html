@@ -50,8 +50,14 @@
 
             <!-- Auth buttons -->
             <div class="d-flex gap-2">
-                <a href="#" class="btn btn-outline-light">Login</a>
-                <a href="#" class="btn btn-warning">Register</a>
+                {%if not user.is_authenticated%}
+                    <a href="{%url 'login' %}" class="btn btn-outline-light">Login</a>
+                    <a href="{%url 'register' %}" class="btn btn-warning">Register</a>
+                {%else%}
+                    <h4 class="text-light">welcome {{user}}</h4>
+                    <a href="{%url 'logout' %}" class="btn btn-secondary">Logout</a>
+                {%endif%}
+
             </div>
 
         </div>

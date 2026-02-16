@@ -1,10 +1,16 @@
 {% extends 'base.html'%}
 {%block title%}Home Page{%endblock title%}
 {%block base%}
-<div class="container d-flex flex-row gap-2">
-    {%for post in posts%}
-      {% include 'posts/carddetail.html' %}
+<div class="container d-flex justify-content-center">
+  <div class="row justify-content-center g-4">
 
+    {% for post in posts %}
+      <div class="col-md-4 d-flex">
+        {% include 'posts/carddetail.html' %}
+      </div>
     {% endfor %}
-    </div>
+
+  </div>
+</div>
+
 {%endblock base%}

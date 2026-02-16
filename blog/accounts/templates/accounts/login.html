@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{%block title%}Login form{%endblock title%}
+{%block base%}
+<h1 class="text-center">Login Form</h1>
+<div class="container">
+{{form.non_field_errors}}
+<form action="" method="POST">
+    {%csrf_token%}
+    {%for field in form%}
+    <label class="form-label" id="{{form.id_for_label}}">{{field.label}}</label>
+    {{field}}
+    {{field.errors}}
+    {%endfor%}
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+</div>
+{%endblock base%}

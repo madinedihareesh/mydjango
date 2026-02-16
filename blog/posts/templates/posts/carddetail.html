@@ -1,12 +1,22 @@
 <a href="{% url 'detail' post.id %}" class="text-decoration-none">
-      <div class="card-sm border border-3 border-gray text-center rounded ">
-      <img class="border border-dark rounded-circle"
-              src="{{post.imageurl}}"
-           alt="{{post.title}}"
-           width="25%"/>
-      <h3 class="text-decoration-none text-dark">{{post.title}}</h3>
-      <p class="text-decoration-none text-dark">{{post.discription}}</p>
-       <button class="btn btn- btn-dark"
-       >Read More ...</button>
-      </div>
+  <div class="card text-center border border-3 h-100" style="width: 18rem;">
+
+    <img src="{{ post.post_url }}"
+         class="card-img-top rounded-circle mx-auto mt-3"
+         alt="{{ post.post_title }}"
+         style="width:120px;height:120px;object-fit:cover;">
+
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title text-dark">{{ post.post_title }}</h5>
+
+      <p class="card-text text-dark text-truncate">
+        {{ post.post_dis }}
+      </p>
+
+      <a href="{% url 'detail' post.id %}" class="btn btn-dark mt-auto">
+        Read More...
       </a>
+    </div>
+
+  </div>
+</a>

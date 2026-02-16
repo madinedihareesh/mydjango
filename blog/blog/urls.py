@@ -21,5 +21,8 @@ from posts import urls
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("posts/",include(urls))
+    path("posts/",include(urls)),
+    path("accounts/",include('accounts.urls')),
 ]
+admin.site.site_header='ABlog'
+admin.site.index_title='ABlog'
